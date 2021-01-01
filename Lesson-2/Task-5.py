@@ -4,13 +4,13 @@ digit = int(input("Введите число (100 - конец операции)
 while digit != 100:
     for el in range(len(my_list)):
         if my_list[el] == digit:
-            my_list.insert(el + 1, digit)
+            my_list.insert(el, digit)
             break
         elif my_list[0] < digit:
             my_list.insert(0, digit)
         elif my_list[-1] > digit:
             my_list.append(digit)
         elif my_list[el] > digit and my_list[el + 1] < digit:
-            my_list.insert(el + 1, digit)
+            my_list.insert(el+1, digit)
     print(f"Текущий список - {my_list}")
     digit = int(input("Введите число: "))
